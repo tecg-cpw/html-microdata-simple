@@ -1,37 +1,32 @@
 <!--
 Documentation du format :
 Schema.org - Person : http://schema.org/Person
-
-Schema Creator :
-http://schema-creator.org/person.php
-
-Google Help - Person Schema :
-https://support.google.com/webmasters/answer/146646?hl=en
-
-Outil de test des données structurées :
-http://www.google.com/webmasters/tools/richsnippets
 -->
 
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<title>Fiche personne</title>
-	    <!--[if lt IE 9]>
-	      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	    <![endif]-->
-	</head>
-	<body>
-		<div>
-			<p>
-				Mon nom est ...
-			</p>
-			<p>
-				Je suis webdesigner
-			</p>
-			<p>
-				Je suis belge
-			</p>
-		</div>
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="fiche, personne, microdata">
+    <meta name="description" content="fiche de Jean Dubois, compatible avec des microdatas">
+    <meta name="author" content="tecg-cpw">
+    <title>Fiche de Jean Dubois</title>
+</head>
+
+<body>
+    <h1>Jean Dubois</h1>
+    <div itemscope itemtype="https://schema.org/Person">
+        <p>
+            Mon nom est <span itemprop="givenName">Jean</span> <span itemprop="familyName">Dubois</span>...
+        </p>
+        <p>
+            Je suis <i itemprop="jobTitle">Webdesigner</i>
+        </p>
+        <p>
+            Je suis <span itemprop="nationality">belge</span>
+        </p>
+    </div>
+</body>
+
 </html>
